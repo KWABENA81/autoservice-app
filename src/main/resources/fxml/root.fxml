@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane fx:id="rootBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1325.0" stylesheets="@../css/style02.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sas.fxmlviews.RootController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Properties" />
+                  <MenuItem fx:id="mnuItemExit" mnemonicParsing="false" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane fx:id="mainTabPane" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="1300.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+              <tabs>
+                <Tab fx:id="tabClient" closable="false" text="Client">
+                  <content>
+                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1310.0">
+                           <children>
+                              <SplitPane dividerPositions="0.425" orientation="VERTICAL" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                <items>
+                                  <AnchorPane>
+                                       <children>
+                                          <SplitPane dividerPositions="0.33" layoutX="319.0" layoutY="134.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" prefHeight="120.0">
+                                                   <children>
+                                                      <SplitPane dividerPositions="0.3" layoutX="61.0" layoutY="49.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <items>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                               <children>
+                                                                  <GridPane hgap="1.0" layoutX="14.0" layoutY="2.0" vgap="1.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label prefHeight="17.0" prefWidth="250.0" text="Search by Name, Phone, VIN or Plate Nr" textAlignment="CENTER" underline="true" GridPane.columnSpan="2" />
+                                                                        <TextField fx:id="txtSearchName" prefHeight="25.0" prefWidth="199.0" promptText="First or Last Name" GridPane.rowIndex="1" />
+                                                                        <TextField fx:id="txtSearchPhone" layoutX="10.0" layoutY="45.0" promptText="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Button fx:id="btnSearchClient" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleSearchClientAction" prefHeight="22.0" prefWidth="135.0" text="Client Search" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                           <HBox.margin>
+                                                                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                                                           </HBox.margin>
+                                                                           <GridPane.margin>
+                                                                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                                                           </GridPane.margin>
+                                                                        </Button>
+                                                                        <Button fx:id="btnSearchVehicle" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleSearchVehicleAction" prefHeight="22.0" prefWidth="135.0" text="Vehicle Search" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                                           <HBox.margin>
+                                                                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                                                           </HBox.margin>
+                                                                           <GridPane.margin>
+                                                                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                                                           </GridPane.margin>
+                                                                        </Button>
+                                                                        <TextField fx:id="txtSearchVIN" layoutX="143.0" layoutY="73.0" prefHeight="25.0" prefWidth="199.0" promptText="VIN" GridPane.rowIndex="2" />
+                                                                        <TextField fx:id="txtSearchPlate" layoutX="10.0" layoutY="43.0" prefHeight="25.0" prefWidth="199.0" promptText="Plate Number" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Button fx:id="btnClearAllSearch" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClearAllSearchAction" prefHeight="50.0" prefWidth="65.0" text="Clear All" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                                                                           <HBox.margin>
+                                                                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                                                           </HBox.margin>
+                                                                           <GridPane.margin>
+                                                                              <Insets bottom="1.0" left="1.0" right="1.0" />
+                                                                           </GridPane.margin>
+                                                                        </Button>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="160.0">
+                                                               <children>
+                                                                  <ScrollPane layoutX="2.0" layoutY="2.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0" prefViewportHeight="230.0" prefViewportWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                     <content>
+                                                                        <TableView fx:id="tblVehicle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="418.0">
+                                                                          <columns>
+                                                                            <TableColumn fx:id="colPlate" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="false" text="Plate" />
+                                                                            <TableColumn fx:id="colVIN" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="VIN" />
+                                                                              <TableColumn fx:id="colModelName" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" sortable="false" text="Model" />
+                                                                              <TableColumn fx:id="colCustomer" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" resizable="false" text="Customer" />
+                                                                          </columns>
+                                                                        </TableView>
+                                                                     </content>
+                                                                  </ScrollPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </items>
+                                                      </SplitPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <SplitPane dividerPositions="0.9" orientation="VERTICAL" prefHeight="200.0" prefWidth="855.0">
+                                                  <items>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                         <children>
+                                                            <SplitPane dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                                               <items>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <VBox layoutX="10.0" layoutY="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <children>
+                                                                              <GridPane prefHeight="295.0">
+                                                                                 <children>
+                                                                                    <TextField fx:id="txtFName" promptText="First Name" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />                                                                              
+                                                                                    <TextField fx:id="txtLName" layoutX="135.0" layoutY="73.0" promptText="Last Name" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                                                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                                                       <children>
+                                                                                          <TextField fx:id="txtPhone" prefWidth="200.0" promptText="Phone - Main">
+                                                                                             <HBox.margin>
+                                                                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                                                                             </HBox.margin>
+                                                                                          </TextField>
+                                                                                          <TextField fx:id="txtPhoneOther" prefWidth="200.0" promptText="Phone Other" />
+                                                                                       </children>
+                                                                                    </HBox>
+                                                                                    <TextField fx:id="txtAddress" layoutX="135.0" layoutY="43.0" promptText="Address" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                                                                    <TextField fx:id="txtAddressOther" layoutX="135.0" layoutY="43.0" promptText="Address - Other" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                                                                                   <TextField fx:id="txtRegion" layoutX="126.0" layoutY="223.0" prefWidth="300.0" promptText="Prov/State" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                                                                                    <TextField fx:id="txtCity" layoutX="504.0" layoutY="73.0" prefWidth="300.0" promptText="City" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                                                                                    <TextField fx:id="txtMCode" layoutX="135.0" layoutY="103.0" promptText="Mail Code" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                                                                                    <TextField fx:id="txtEmail" layoutX="135.0" layoutY="163.0" promptText="Email" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9" />                                                                             
+                                                                                    
+                                                                                    <Label prefHeight="19.0" prefWidth="240.0" text="Client Information" textAlignment="CENTER" underline="true" GridPane.columnSpan="3">
+                                                                                       <font>
+                                                                                          <Font name="System Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="115.0" text="First Name" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="47.0" prefWidth="115.0" text="Last Name" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="77.0" prefWidth="115.0" text="Address" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="107.0" prefWidth="115.0" text="Address - Other" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="137.0" prefWidth="115.0" text="City" textAlignment="RIGHT" GridPane.rowIndex="7" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="167.0" prefWidth="115.0" text="Mail Code" textAlignment="RIGHT" GridPane.rowIndex="8" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="197.0" prefWidth="115.0" text="Province" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="227.0" prefWidth="115.0" text="Email" textAlignment="RIGHT" GridPane.rowIndex="9" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="257.0" prefWidth="115.0" text="Phone" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                                    
+                                                         
+                                                                                                         </children>
+                                                                                 <columnConstraints>
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+                                                                                 </columnConstraints>
+                                                                                 <rowConstraints>
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                 </rowConstraints>
+                                                                              </GridPane>
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <VBox layoutX="10.0" layoutY="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <children>
+                                                                              <GridPane layoutX="63.0" layoutY="164.0" prefHeight="275.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="5.0">
+                                                                                 <children>
+                                                                                    <Label prefHeight="19.0" prefWidth="240.0" text="Vehicle Information" textAlignment="CENTER" underline="true" GridPane.columnSpan="3">
+                                                                                       <font>
+                                                                                          <Font name="System Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="txtVIN" promptText="Vehicle Id Number" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                                                    <TextField fx:id="txtPlate" layoutX="135.0" layoutY="73.0" promptText="Plate Nr." GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+																					<TextField fx:id="txtMake" layoutX="504.0" layoutY="73.0" prefWidth="140.0" promptText="Vehicle Make" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                                                    <TextField fx:id="txtModel" layoutX="135.0" layoutY="103.0" prefWidth="140.0" promptText="Model" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                                                    <TextField fx:id="txtColour" layoutX="135.0" layoutY="43.0" prefWidth="142.0" promptText="Exterior Colour" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                                                                    <TextField fx:id="txtYear" layoutX="135.0" layoutY="43.0" promptText="Model Year" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                                                                    <TextField fx:id="txtOdometerReading" layoutX="294.0" layoutY="90.0" promptText="Odometer Reading" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                                                                     <TextField fx:id="txtTrimDoors" layoutX="144.0" layoutY="174.0" prefWidth="70.0" promptText="Doors" GridPane.rowIndex="6" />
+                                                                                    <TextField fx:id="txtTrimLevel" layoutX="10.0" layoutY="146.0" prefWidth="140.0" promptText="Trim Level" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                                                                                    <TextField fx:id="txtTrimDrive" layoutX="135.0" layoutY="163.0" prefWidth="70.0" promptText="Drive Wheels" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                                                                    <TextField fx:id="txtTrimOther" layoutX="144.0" layoutY="185.0" prefWidth="140.0" promptText="Other  - Trim" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                                                                                     <TextField fx:id="txtTrimDescription" editable="false" focusTraversable="false" layoutX="10.0" layoutY="146.0" promptText="Full Trim Description" style="-fx-font-weight: bold; -fx-background-color: lightgray; -fx-font-size: 11; -fx-font-family: Arial, Helvetica;" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="5" />
+                                                                                   <TextField fx:id="txtEngineCapacity" layoutX="280.0" layoutY="256.0" prefWidth="70.0" promptText="Capacity" GridPane.rowIndex="8" />
+																				   <TextField fx:id="txtEngineFuel" layoutX="144.0" layoutY="146.0" prefWidth="140.0" promptText="Fuel" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                                                                                   <TextField fx:id="txtEngineBuild" layoutX="348.0" layoutY="228.0" prefWidth="70.0" promptText="Eng Build" GridPane.columnIndex="3" GridPane.rowIndex="8" />                                                                                    
+                                                                                    <TextField fx:id="txtEngineOther" layoutX="212.0" layoutY="258.0" promptText="Aux Description" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                                                                                   <TextField fx:id="txtEngineDescription" editable="false" focusTraversable="false" layoutX="144.0" layoutY="173.0" promptText="Full Engine Description" style="-fx-font-weight: bold; -fx-background-color: lightgray; -fx-font-size: 11; -fx-font-family: Arial, Helvetica;" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="65.0" text="VIN" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="42.0" prefWidth="65.0" text="Colour" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="69.0" prefWidth="65.0" text="Plate:" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="212.0" layoutY="42.0" prefWidth="65.0" text="Year" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="69.0" prefHeight="30.0" prefWidth="130.0" text="Trim Definition" textAlignment="CENTER" textOverrun="CLIP" underline="true" wrapText="true" GridPane.rowIndex="5">
+                                                                                       <font>
+                                                                                          <Font name="System Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="69.0" prefWidth="65.0" text="Make" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="212.0" layoutY="69.0" prefWidth="65.0" text="Model" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="123.0" prefHeight="30.0" prefWidth="130.0" text="Engine" textAlignment="CENTER" underline="true" GridPane.rowIndex="7">
+                                                                                       <font>
+                                                                                          <Font name="System Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    
+                                                                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="94.0" prefWidth="65.0" text="Odometer" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                                 </children>
+                                                                                 <columnConstraints>
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                 </columnConstraints>
+                                                                                 <rowConstraints>
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                 </rowConstraints>
+                                                                              </GridPane>
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </items>
+                                                            </SplitPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                         <children>
+                                                            <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <HBox prefHeight="26.0" prefWidth="552.0" GridPane.columnIndex="2" GridPane.columnSpan="6">
+                                                                     <children>
+                                                                        <Button fx:id="btnClearClientInfo" focusTraversable="false" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClearClientInfoAction" prefHeight="22.0" prefWidth="125.0" text="Clear Owner" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                                                           <HBox.margin>
+                                                                              <Insets left="4.0" right="4.0" />
+                                                                           </HBox.margin></Button>
+                                                                        <Button fx:id="btnClearVehicleInfo" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClearVehicleInfoAction" prefHeight="22.0" prefWidth="125.0" text="Clear Vehicle">
+                                                                           <HBox.margin>
+                                                                              <Insets left="4.0" right="4.0" />
+                                                                           </HBox.margin></Button>
+                                                                        <Button fx:id="btnCreateServiceOrder" layoutX="445.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCreateServiceOrderAction" prefHeight="22.0" prefWidth="125.0" text="Create Service">
+                                                                           <HBox.margin>
+                                                                              <Insets left="4.0" right="4.0" />
+                                                                           </HBox.margin></Button>
+                                                                        <Button fx:id="btnProcessClient" layoutX="560.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleProcessClientAction" prefHeight="22.0" prefWidth="125.0" text="Process Data">
+                                                                           <HBox.margin>
+                                                                              <Insets left="4.0" right="4.0" />
+                                                                           </HBox.margin></Button>
+                                                                     </children>
+                                                                  </HBox>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </items>
+                                                </SplitPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.33" layoutX="1.0" layoutY="1.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                             <items>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <ScrollPane prefViewportHeight="518.0" prefViewportWidth="405.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <content>
+                                                            <TableView fx:id="tblServiceVehicle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="383.0" prefWidth="422.0" stylesheets="@../css/style01.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                              <columns>
+                                                                <TableColumn fx:id="colSOStartDate" maxWidth="95.0" minWidth="95.0" prefWidth="95.0" resizable="false" text="Date" />
+                                                                <TableColumn fx:id="colSOModel" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" text="Model" />
+                                                                  <TableColumn fx:id="colSOPlate" maxWidth="73.0" minWidth="73.0" prefWidth="73.0" resizable="false" text="Plate" />
+                                                                  <TableColumn fx:id="colSOMake" maxWidth="130.0" minWidth="129.0" prefWidth="129.0" resizable="false" text="Make" />
+                                                              </columns>
+                                                            </TableView>
+                                                         </content>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <SplitPane dividerPositions="0.3" layoutX="166.0" layoutY="197.0" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <items>
+                                                          <AnchorPane>
+                                                               <children>
+                                                                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="25.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="25.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="25.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="25.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="27.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="28.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>     
+                                                                        <HBox GridPane.columnSpan="8" GridPane.rowIndex="1">
+                                                                           <children>
+                                                                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="50.0" text="Client" textAlignment="RIGHT" />
+                                                                              <TextField fx:id="txtSOFName" editable="false" focusTraversable="false" prefWidth="150.0" promptText="First Name" />
+																			  <TextField fx:id="txtSOLName" editable="false" focusTraversable="false" prefWidth="150.0" promptText="Last Name" />
+                                                                              <TextField fx:id="txtSOPhoneInfo" editable="false" focusTraversable="false" prefWidth="150.0" promptText="Contact Phone" />
+																			   <TextField fx:id="txtSOEmailInfo" editable="false" focusTraversable="false" prefWidth="145.0" promptText="Contact Email" />
+																			  <TextField fx:id="txtSOContactInfo0" editable="false" focusTraversable="false" prefWidth="220.0" promptText="Contact Information" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                        <HBox layoutX="10.0" layoutY="20.0" GridPane.columnSpan="8" GridPane.rowIndex="2">
+                                                                           <children>
+                                                                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="50.0" text="Vehicle" textAlignment="RIGHT" />
+                                                                              <TextField fx:id="txtSOVehicleInfo" editable="false" focusTraversable="false" prefWidth="150.0" promptText="Make and Model" />
+																			   <TextField fx:id="txtSOVehicleVINInfo" editable="false" focusTraversable="false" prefWidth="150.0" promptText="VIN" />
+																			  <TextField fx:id="txtSOVehiclePlateInfo" editable="false" focusTraversable="false" prefWidth="75.0" promptText="Plate" />
+                                                                              <TextField fx:id="txtSOVehicleTrimInfo" editable="false" focusTraversable="false" prefWidth="220.0" promptText="Trim" />
+																			   <TextField fx:id="txtSOVehicleEngineInfo" editable="false" focusTraversable="false" prefWidth="220.0" promptText="Engine Build" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                        <HBox layoutX="10.0" layoutY="50.0" GridPane.columnSpan="8" GridPane.rowIndex="3">
+                                                                           <children>
+                                                                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" minWidth="50.0" prefWidth="50.0" text="Part" textAlignment="RIGHT" />
+                                                                              <TextField fx:id="txtSOPartNr" prefWidth="110.0" promptText="Part Number" focusTraversable="false" />
+																			  <TextField fx:id="txtSOPartDescription" prefWidth="590.0" promptText="Part Description" />
+                                                                              <TextField fx:id="txtSOPartPrice" layoutX="78.0" layoutY="10.0" prefWidth="75.0" promptText="Item Price" />
+                                                                              <TextField fx:id="txtSOPartQty" layoutX="30.0" layoutY="10.0" prefWidth="50.0" promptText="Qty" />
+                                                                           </children>
+                                                                        </HBox>
+																		<HBox layoutX="10.0" layoutY="50.0" GridPane.columnSpan="8" GridPane.rowIndex="4">
+                                                                           <children>
+                                                                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" minWidth="50.0" prefWidth="50.0" text="Service" textAlignment="RIGHT" />
+                                                                              <TextField fx:id="txtSOServiceDescription" prefWidth="825.0" promptText="Service Description" />
+                                                                           </children>
+                                                                        </HBox>
+																		<HBox prefHeight="100.0" prefWidth="390.0" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.rowIndex="5">
+                                                                           <children>
+																			<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" minWidth="50.0" prefWidth="50.0" text="Hours" textAlignment="RIGHT" />
+																			<TextField fx:id="txtSOLabourHrs" layoutX="10.0" layoutY="43.0" minWidth="50.0" prefWidth="50.0" promptText="Hours" />
+																			<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" minWidth="50.0" prefWidth="50.0" text="Rate" textAlignment="RIGHT" />
+																			<TextField fx:id="txtSOLabourRate" layoutX="10.0" layoutY="13.0" minWidth="55.0" prefWidth="55.0" promptText="Rate" />
+																			<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" minWidth="60.0" prefWidth="60.0" text="Odometer" textAlignment="RIGHT" />
+																			<TextField fx:id="txtSOOdometer" layoutX="10.0" layoutY="13.0" minWidth="65.0" prefWidth="65.0" promptText="Odometer" />
+																			<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" minWidth="70.0" prefWidth="70.0" text="Status: " textAlignment="RIGHT" />
+																			<RadioButton fx:id="rbPend" layoutX="10.0" layoutY="15.0" minWidth="70.0" mnemonicParsing="false" prefWidth="70.0" text="Pending" />
+																			<RadioButton fx:id="rbComplete" layoutX="10.0" layoutY="20.0" minWidth="75.0" mnemonicParsing="false" prefWidth="80.0" text="Completed" />
+																			</children>
+                                                                        </HBox>                                                                        
+                                                                     </children>
+                                                                     <children>
+   																	 <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="6" GridPane.rowIndex="6">
+                                                                              <children>
+                                                                                 <Button fx:id="btnDeleteServiceItem" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDeleteServiceOrderItemAction" prefHeight="22.0" prefWidth="105.0" text="Delete Item">
+                                                                                 <HBox.margin>
+                                                                                    <Insets left="4.0" right="4.0" />
+                                                                                 </HBox.margin></Button>
+                                                                                 <Button fx:id="btnClearServiceItem" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClearServiceOrderItemAction" prefHeight="22.0" prefWidth="105.0" text="Clear Item">
+                                                                                 <HBox.margin>
+                                                                                    <Insets left="4.0" right="4.0" />
+                                                                                 </HBox.margin></Button>
+                                                                                 <Button fx:id="btnUpdateServiceItem" layoutX="62.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleUpdateServiceOrderItemAction" prefHeight="22.0" prefWidth="105.0" text="Update Item">
+                                                                                 <HBox.margin>
+                                                                                    <Insets left="4.0" right="4.0" />
+                                                                                 </HBox.margin></Button>
+                                                                                 <Button fx:id="btnSaveServiceItem" layoutX="114.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSaveServiceOrderItemAction" prefHeight="22.0" prefWidth="105.0" text="Save Item">
+                                                                                 <HBox.margin>
+                                                                                    <Insets left="4.0" right="4.0" />
+                                                                                 </HBox.margin></Button>
+                                                                                 <Button fx:id="btnCompleteService" layoutX="415.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCompleteServiceOrderAction" prefHeight="22.0" prefWidth="105.0" text="Complete Service">
+                                                                                 <HBox.margin>
+                                                                                    <Insets left="4.0" right="4.0" />
+                                                                                 </HBox.margin></Button>
+                                                                              <Button fx:id="btnEstimateService" layoutX="528.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleEstimateServiceOrderAction" prefHeight="22.0" prefWidth="105.0" text="Get Estimate">
+                                                                                 <HBox.margin>
+                                                                                    <Insets left="4.0" right="4.0" />
+                                                                                 </HBox.margin></Button>
+                                                                              </children>
+                                                                           </HBox>                                                                       
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                          <AnchorPane>
+                                                               <children>
+                                                                  <ScrollPane layoutX="162.0" layoutY="93.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                     <content>
+                                                                        <TableView fx:id="tblWorkItems" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="213.0">
+                                                                          <columns>
+                                                                            <TableColumn fx:id="colPartDescription" editable="false" maxWidth="-Infinity" minWidth="260.0" prefWidth="260.0" text="Item Description" />
+                                                                              <TableColumn fx:id="colQuantity" editable="false" maxWidth="-Infinity" minWidth="60.0" prefWidth="60.0" text="Quantity" />
+                                                                              <TableColumn fx:id="colItemPrice" maxWidth="-Infinity" minWidth="65.0" prefWidth="65.0" text="Amount" />
+                                                                              <TableColumn fx:id="colLabourHrs" maxWidth="-Infinity" minWidth="65.0" prefWidth="65.0" text="Labour" />
+                                                                              <TableColumn fx:id="colWorkDescription" maxWidth="-Infinity" minWidth="345.0" prefWidth="345.0" text="Work Description" />
+                                                                              <TableColumn fx:id="colWorkStatus" maxWidth="-Infinity" minWidth="55.0" prefWidth="55.0" text="Status" />
+                                                                          </columns>
+                                                                        </TableView>
+                                                                     </content>
+                                                                  </ScrollPane>
+                                                               </children></AnchorPane>
+                                                        </items>
+                                                      </SplitPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+						   </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="tabService" closable="false" text="Service">
+                  <content>
+                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0">
+                           <children>
+                              <SplitPane dividerPositions="0.19" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane SplitPane.resizableWithParent="false">
+                                       <children>
+                                          <SplitPane fx:id="splitPane03" dividerPositions="0.33333333, 0.66666666" layoutX="58.0" layoutY="-12.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <AnchorPane>
+                                                   <children>
+                                                      <GridPane fx:id="gridPane01" layoutX="89.0" layoutY="14.0" minHeight="-Infinity" prefHeight="115.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                                        <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="425.0" prefWidth="425.0" text="Ownership &amp; Client Queries" textAlignment="CENTER" GridPane.columnSpan="3" />
+                                                            <Button fx:id="btnQueryByNames" mnemonicParsing="false" onAction="#handleQueryByOwnerAction" prefHeight="55.0" prefWidth="100.0" text="Owner Search" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                                                            <Button fx:id="btnClearClientQuery" layoutX="336.0" layoutY="121.0" mnemonicParsing="false" onAction="#handleClearClientQueryAction" prefHeight="27.0" prefWidth="200.0" text="Clear" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                                            <TextField fx:id="txtQueryNames01" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                            <TextField fx:id="txtQueryNames02" layoutX="136.0" layoutY="65.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                            <ComboBox fx:id="cboQueryByNames" onAction="#handleQueryByNamesCBOAction" prefHeight="55.0" prefWidth="150.0" promptText="Query By" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </children></AnchorPane>
+                                                <AnchorPane layoutX="10.0" layoutY="10.0">
+                                                   <children>
+                                                      <GridPane fx:id="gridPane02" minHeight="-Infinity" prefHeight="115.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                                        <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="410.0" prefWidth="410.0" text="Vehicle Queries" textAlignment="CENTER" GridPane.columnSpan="3" />
+                                                            <Button fx:id="btnQueryByVehicle" mnemonicParsing="false" onAction="#handleQueryByVehicleAction" prefHeight="55.0" prefWidth="100.0" text="Vehicle Search" textAlignment="CENTER" underline="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                            <TextField fx:id="txtQueryVehicle01" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                            <Button fx:id="btnClearVehicleQuery" layoutX="321.0" layoutY="121.0" mnemonicParsing="false" onAction="#handleClearVehicleQueryAction" prefHeight="27.0" prefWidth="200.0" text="Clear " GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                            <ComboBox fx:id="cboQueryByVehicle" onAction="#handleQueryByVehicleCBOAction" prefHeight="55.0" prefWidth="100.0" promptText="Query By" GridPane.rowIndex="1" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane>
+                                                   <children>
+                                                      <GridPane fx:id="gridPane011" minHeight="-Infinity" prefHeight="115.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="425.0" prefWidth="425.0" text="Service Order Queries" textAlignment="CENTER" GridPane.columnSpan="3" />
+                                                            <Button fx:id="btnQueryByService" mnemonicParsing="false" onAction="#handleQueryByServiceAction" prefHeight="55.0" prefWidth="100.0" text="Service Search" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                                                            <Button fx:id="btnClearServiceQuery" layoutX="336.0" layoutY="121.0" mnemonicParsing="false" onAction="#handleClearServiceQueryAction" prefHeight="27.0" prefWidth="200.0" text="Clear" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                                            <TextField fx:id="txtQueryService01" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                            <ComboBox fx:id="cboQueryByService" onAction="#handleQueryByServiceCBOAction" prefHeight="55.0" prefWidth="150.0" promptText="Query By" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                                                            <DatePicker fx:id="dateBegin" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <DatePicker fx:id="dateEnd" layoutX="116.0" layoutY="73.0" showWeekNumbers="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="85.0" prefWidth="95.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                   </children></AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                  <AnchorPane>
+                                       <children>
+                                          <SplitPane dividerPositions="0.3333, 0.6667" layoutX="240.0" layoutY="187.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                   <children>
+                                                      <ScrollPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="370.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                         <content>
+                                                            <TableView fx:id="tblOwnerQueryResult" maxHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0">
+                                                              <columns>
+                                                                <TableColumn fx:id="colFirstname" maxWidth="-Infinity" minWidth="110.0" prefWidth="110.0" text="Firstname" />
+                                                                <TableColumn fx:id="colLastname" maxWidth="-Infinity" minWidth="115.0" prefWidth="115.0" text="Lastname" />
+                                                                  <TableColumn fx:id="colContact" maxWidth="-Infinity" minWidth="200.0" prefWidth="200.0" text="Contact" />
+                                                              </columns>
+                                                            </TableView>
+                                                         </content>
+                                                      </ScrollPane>
+                                                      <FlowPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="165.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                         <children>
+                                                            <GridPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="160.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <Label maxHeight="-Infinity" prefHeight="28.0" text="Owner Details" underline="true" wrapText="true" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Firstname" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                  <TextField fx:id="txtOwnerDetailsFirstname" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="45.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Lastname" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="210.0" layoutY="45.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Phones" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="75.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Email" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="210.0" layoutY="75.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Address" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                  <TextField fx:id="txtOwnerDetailsLastname" editable="false" focusTraversable="false" layoutX="110.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtOwnerDetailsPhones" editable="false" focusTraversable="false" layoutX="310.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtOwnerDetailsEmail" editable="false" focusTraversable="false" layoutX="110.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtOwnerDetailsAddress" editable="false" focusTraversable="false" layoutX="110.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </FlowPane>
+                                                   </children></AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                   <children>
+                                                      <ScrollPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="370.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                         <content>
+                                                            <TableView fx:id="tblVehicleQueryResult" maxHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0">
+                                                              <columns>
+                                                                <TableColumn fx:id="colQueryVIN" editable="false" maxWidth="-Infinity" minWidth="95.0" prefWidth="95.0" text="VIN" />
+                                                                <TableColumn fx:id="colQueryPlate" maxWidth="-Infinity" minWidth="65.0" prefWidth="65.0" text="Plate" />
+                                                                  <TableColumn fx:id="colQueryTrim" maxWidth="-Infinity" minWidth="135.0" prefWidth="135.0" text="Trim" />
+                                                                  <TableColumn fx:id="colQueryEngine" maxWidth="-Infinity" minWidth="125.0" prefWidth="125.0" text="Engine" />
+                                                              </columns>
+                                                            </TableView>
+                                                         </content>
+                                                      </ScrollPane>
+                                                      <FlowPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="165.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                         <children>
+                                                            <GridPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="160.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <Label maxHeight="-Infinity" prefHeight="28.0" text="Vehicle Details" underline="true" wrapText="true" GridPane.columnSpan="2" />
+                                                                  <TextField fx:id="txtVehicleOwnerRef" editable="false" focusTraversable="false" GridPane.columnIndex="3">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Ref." textAlignment="RIGHT" GridPane.columnIndex="2" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="210.0" layoutY="45.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Plate" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="45.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="VIN" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="75.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Make &amp; Model" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="75.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Trim" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="135.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Engine Build" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                  <TextField fx:id="txtVehicleDetailsPlate" editable="false" focusTraversable="false" layoutX="310.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtVehicleDetailsVIN" editable="false" focusTraversable="false" layoutX="110.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtVehicleDetailsMakeModel" editable="false" focusTraversable="false" layoutX="110.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtVehicleDetailsTrim" editable="false" focusTraversable="false" layoutX="110.0" layoutY="103.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtVehicleDetailsEngine" editable="false" focusTraversable="false" layoutX="110.0" layoutY="133.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </FlowPane>
+                                                   </children></AnchorPane>
+                                                <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                   <children>
+                                                      <ScrollPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="370.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                         <content>
+                                                            <TableView fx:id="tblServiceQueryResult" maxHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0">
+                                                               <columns>
+                                                                  <TableColumn fx:id="colQueryJobId" maxWidth="-Infinity" minWidth="70.0" prefWidth="70.0" text="Job ID" />
+                                                                  <TableColumn fx:id="colQuerySDate" maxWidth="-Infinity" minWidth="78.0" prefWidth="78.0" text="Date" />
+                                                                  <TableColumn fx:id="colQueryPartDesc" maxWidth="-Infinity" minWidth="195.0" prefWidth="195.0" text="Part Desc" />
+                                                                  <TableColumn fx:id="colQueryStatus" maxWidth="-Infinity" minWidth="75.0" prefWidth="75.0" text="Status" />
+                                                               </columns>
+                                                            </TableView>
+                                                         </content>
+                                                      </ScrollPane>
+                                                      <FlowPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="165.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                         <children>
+                                                            <GridPane alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="160.0">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Job ID" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                                  <TextField fx:id="txtSODetailsDateIn" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextArea fx:id="taSODetailsDescription" editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" promptText="Description" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" GridPane.rowSpan="2">
+                                                                     <font>
+                                                                        <Font size="10.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Label layoutX="10.0" layoutY="45.0" maxHeight="-Infinity" prefHeight="28.0" text="Service Order Details" underline="true" wrapText="true" GridPane.columnSpan="2" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="45.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Odometer" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="210.0" layoutY="45.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Date In" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="75.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Description" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="105.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Comment" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                  <TextField fx:id="txtSODetailsComment" editable="false" focusTraversable="false" layoutX="110.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtSODetailsJobId" editable="false" focusTraversable="false" layoutX="110.0" layoutY="43.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="45.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Ref." textAlignment="RIGHT" GridPane.columnIndex="2" />
+                                                                  <TextField fx:id="txtServiceVehicleRef" editable="false" focusTraversable="false" layoutX="110.0" layoutY="43.0" GridPane.columnIndex="3">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtSODetailsOdometer" editable="false" focusTraversable="false" layoutX="310.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtSODetailsStatus" editable="false" focusTraversable="false" layoutX="110.0" layoutY="73.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="75.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="95.0" text="Status" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                                               </opaqueInsets>
+                                                            </GridPane>
+                                                         </children>
+                                                      </FlowPane>
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabReport" closable="false" text="Reports">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.225" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <GridPane layoutX="32.0" layoutY="116.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="100.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="145.0" prefWidth="145.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="220.0" text="Reports" textAlignment="CENTER" underline="true" GridPane.columnSpan="2" />
+                                                <ComboBox fx:id="cboReportType" prefWidth="230.0" promptText="Report Type Selection" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                <Label text="Start Date" GridPane.rowIndex="3" />
+                                                <Label layoutX="10.0" layoutY="75.0" text="End Date" GridPane.rowIndex="4" />
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="15.0" prefWidth="220.0" text="Period" textAlignment="CENTER" GridPane.rowIndex="2" />
+                                                <Button fx:id="btnDisplayReport" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDisplayReportAction" prefHeight="45.0" prefWidth="230.0" text="Display Report" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.rowSpan="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="btnExportReport" layoutX="12.0" layoutY="228.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleExportReportAction" prefHeight="45.0" prefWidth="230.0" text="Export Report" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="8" GridPane.rowSpan="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="btnCancelAllReport" layoutX="10.0" layoutY="288.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCancelAllReportAction" prefHeight="45.0" prefWidth="230.0" text="Cancel All" GridPane.columnSpan="2" GridPane.rowIndex="10" GridPane.rowSpan="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <DatePicker fx:id="dpReportStartDate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <DatePicker fx:id="dpReportEndDate" layoutX="130.0" layoutY="103.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                              <AnchorPane>
+                                                   <children>
+                                                      <TextFlow fx:id="tfReportSummary" prefHeight="500.0" prefWidth="455.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0" />
+                                                      <HBox layoutX="40.0" layoutY="-12.0" prefHeight="35.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lblSummary" text="Label" wrapText="true" />
+                                                         </children></HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tabOther" closable="false" disable="true" text="Other">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.25" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <items>
+                                    <AnchorPane>
+                                       <children>
+                                          <SplitPane dividerPositions="0.298" layoutX="58.0" layoutY="-12.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.5" layoutX="240.0" layoutY="187.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+   </center>
+   <bottom>
+      <HBox fx:id="hboxStatusBar" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="120.0" prefWidth="164.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="120.0" prefWidth="164.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="120.0" prefWidth="164.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="120.0" prefWidth="164.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="120.0" prefWidth="164.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="120.0" prefWidth="164.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="120.0" prefWidth="164.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="120.0" prefWidth="164.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lblStatusBar0" prefHeight="17.0" prefWidth="135.0" text="Label" />
+                  <Label fx:id="lblStatusBar3" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="135.0" text="Label" GridPane.columnIndex="7" />
+                  <Label fx:id="lblStatusBar1" layoutX="1106.0" layoutY="10.0" prefHeight="17.0" prefWidth="135.0" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="lblStatusBar2" layoutX="147.0" layoutY="10.0" prefHeight="17.0" prefWidth="135.0" text="Label" GridPane.columnIndex="6" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </GridPane>
+         </children>
+         <BorderPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </BorderPane.margin></HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+   </padding>
+</BorderPane>

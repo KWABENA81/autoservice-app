@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane minHeight="255.0" minWidth="355.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sas.view.controller.LoginViewController">
+   <children>
+      <Button layoutX="199.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Login" />
+      <Label layoutX="50.0" layoutY="90.0" prefHeight="27.0" prefWidth="258.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="50.0" layoutY="150.0" promptText="TextField" />
+      <TextField layoutX="50.0" layoutY="125.0" promptText="TextField" />
+   </children>
+</Pane>

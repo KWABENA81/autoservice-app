@@ -1,0 +1,17 @@
+.root {
+    -fx-background-color: #bcdcbf;
+	-fx-font-family: "Arial";
+	-fx-font-size: 11px;
+}
+
+.button {
+    -fx-font: 11px "Sans-Serif";
+    -fx-background-color: #bcbcbc;
+	-fx-padding: 3 3 3 3;
+    -fx-effect: dropshadow(one-pass-box, black, 1.8, 1.5, 2, 1.5);
+}
+
+.label {
+    -fx-font: 9pt Helvetica, sans-serif;
+    -fx-padding: 2 0 2 0;
+}

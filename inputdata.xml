@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE toc SYSTEM "inputdata.dtd">
+<inputdata>
+	<appdata>
+		<author>
+			<name>Solomon SA</name>
+			<contact>Toronto, Ontario</contact>
+			<title>Auto Service Application</title>
+			<revdate>February 29th, 2016</revdate>
+		</author>
+	</appdata>
+	<properties>
+		<company>
+			<outlet>ASKSEF Auto Centre</outlet>
+			<busnr>125-456-9874</busnr>
+			<address>225 Samcy Road</address>
+			<address>Plot #234</address>
+			<city>Shantt City</city>
+			<provstate>Shantt City</provstate>
+			<postalcode>Shantt City</postalcode>
+			<country>01224567895</country>
+			<phone>99999999</phone>
+			<fax>099999999</fax>
+			<companyEmail>099999999</companyEmail>
+			<webpage>099999999</webpage>
+			<personnel>
+				<mgr>ASKSEF</mgr>
+				<employee>SASK</employee>
+			</personnel>
+			<labourrate>
+				<regular>90.00</regular>
+				<special>75.00</special>
+				<extra>50.00</extra>
+			</labourrate>
+		</company>
+	</properties>
+	<file_storage>
+		<ftype>reports</ftype>
+		<path>C:\Users\sasefa\workspace3\reports</path>
+	</file_storage>
+	<file_storage>
+		<ftype>invoices</ftype>
+		<path>C:\Users\sasefa\workspace3\invoices</path>
+	</file_storage>
+	<countryInfo>
+		<countryName>CANADA</countryName>
+		<mailCodeEnforced>TRUE</mailCodeEnforced>
+		<mailCodeFormat>([A-Za-z][0-9][A-Za-z]){1}([0-9][A-Za-z][0-9]){1}</mailCodeFormat>
+	</countryInfo>
+	<definedformats>
+		<email>^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$</email>
+	</definedformats>
+	<defaults>
+		<yearsLimit>25</yearsLimit>
+		<taxRate>8</taxRate>
+		<taxRate>5</taxRate>
+		<taxRate>0</taxRate>
+		<taxRate>0</taxRate>
+		<invoice_output_path>C:\Users\SASEFA\Documents\invoices</invoice_output_path>
+		<partnumber>GEN99999</partnumber> 
+		<jobIDLength>7</jobIDLength>
+		<platePrefix>NP_</platePrefix>
+		<defaultuser>
+			<firstname>ASKSEF</firstname>
+			<lastname>ASKSEF</lastname>
+			<phone>9999999</phone>
+			<address>
+				<street>Dummy Street</street>
+				<city>Pit City</city>
+				<mailcode>D9M4M8</mailcode>
+				<region>ONTARIO</region>
+				<country>Canada</country>
+			</address>
+		</defaultuser>
+	</defaults>
+</inputdata>

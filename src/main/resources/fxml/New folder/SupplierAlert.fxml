@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="223.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane hgap="5.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+          <VBox maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" prefWidth="400.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <children>
+                  <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                    <Label fx:id="detailsLabel" alignment="CENTER_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Contacts" textAlignment="LEFT" wrapText="true" GridPane.rowIndex="2">
+                      <font>
+                        <Font size="12.0" />
+                      </font>
+                    </Label>
+                    <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" text="Supplier Information" textAlignment="CENTER" GridPane.columnSpan="3">
+                      <font>
+                        <Font name="System Bold" size="14.0" />
+                      </font>
+                    </Label>
+                        <Label fx:id="detailsLabel1" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="47.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Address" textAlignment="LEFT" wrapText="true" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="detailsLabel2" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="47.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="City" textAlignment="LEFT" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="detailsLabel21" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="70.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Supplier Name" textAlignment="LEFT" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                        <TextField layoutX="92.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <TextField layoutX="92.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+                        <TextField layoutX="92.0" layoutY="103.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                        <Label fx:id="detailsLabel3" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="77.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Reference Id" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="92.0" layoutY="73.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <TextField layoutX="92.0" layoutY="73.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <Label fx:id="detailsLabel4" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="77.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Phones" textAlignment="LEFT" wrapText="true" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="92.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <TextField layoutX="92.0" layoutY="103.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <Label fx:id="detailsLabel41" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="107.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Fax" textAlignment="LEFT" wrapText="true" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="detailsLabel411" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="137.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Email" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="detailsLabel412" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="137.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Other" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="339.0" layoutY="103.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                        <TextField layoutX="92.0" layoutY="133.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                        <Label fx:id="detailsLabel4121" alignment="CENTER_RIGHT" layoutX="256.0" layoutY="137.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Mail Code" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="339.0" layoutY="133.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                        <Label fx:id="detailsLabel22" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="197.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="80.0" text="Prov/State" textAlignment="LEFT" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="339.0" layoutY="163.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                        <TextField layoutX="92.0" layoutY="193.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+            </children>
+          </VBox>
+          <HBox maxHeight="-Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+              <HBox fx:id="actionParent" alignment="CENTER">
+                <children>
+                  <Button fx:id="actionButton" mnemonicParsing="false" text="%button.action" HBox.hgrow="NEVER">
+                    <HBox.margin>
+                      <Insets right="14.0" />
+                    </HBox.margin>
+                  </Button>
+                </children>
+                <HBox.margin>
+                  <Insets />
+                </HBox.margin>
+              </HBox>
+              <Pane maxWidth="+Infinity" HBox.hgrow="ALWAYS" />
+              <Button fx:id="cancelButton" cancelButton="true" minWidth="80.0" mnemonicParsing="false" text="%button.cancel" HBox.hgrow="NEVER">
+                <HBox.margin>
+                  <Insets />
+                </HBox.margin>
+              </Button>
+              <HBox fx:id="okParent" alignment="CENTER">
+                <children>
+                  <Button fx:id="okButton" minWidth="80.0" mnemonicParsing="false" text="%button.ok" HBox.hgrow="NEVER">
+                    <HBox.margin>
+                      <Insets left="14.0" />
+                    </HBox.margin>
+                  </Button>
+                </children>
+              </HBox>
+            </children>
+          </HBox>
+        </children>
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="+Infinity" minWidth="-Infinity" />
+        </columnConstraints>
+        <padding>
+          <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+        </padding>
+        <rowConstraints>
+          <RowConstraints maxHeight="+Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+        </rowConstraints>
+        <stylesheets>
+          <URL value="@../../../../../../AlertDialog_i18n/AlertDialog.css" />
+        </stylesheets>
+      </GridPane>
+   </children>
+</AnchorPane>

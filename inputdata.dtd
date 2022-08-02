@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT inputdata (appdata, properties, file_storage*, countryInfo, defn, defaults )>
+<!ELEMENT appdata (author)>
+	<!ELEMENT author (name, contact,title, revdate)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT contact (#PCDATA)>
+	<!ELEMENT title (#PCDATA)>
+	<!ELEMENT revdate (#PCDATA)> 
+<!ELEMENT properties (company)>
+	<!ELEMENT company (outlet, busnr, address+, city, provstate?, postalcode?, country, phone+, fax?, companyEmail?, webpage?, personnel+, labourrate+)> 
+		<!ELEMENT outlet (#PCDATA)>
+		<!ELEMENT busnr (#PCDATA)>
+		<!ELEMENT address (#PCDATA)> 
+		<!ELEMENT city (#PCDATA)>
+		<!ELEMENT provstate (#PCDATA)>
+		<!ELEMENT postalcode (#PCDATA)>
+		<!ELEMENT country (#PCDATA)>
+		<!ELEMENT phone (#PCDATA)>
+		<!ELEMENT fax (#PCDATA)>
+		<!ELEMENT companyEmail (#PCDATA)>
+		<!ELEMENT webpage (#PCDATA)>
+		<!ELEMENT personnel (mgr+, employee*)>
+		<!ELEMENT mgr (#PCDATA)> 
+		<!ELEMENT employee (#PCDATA)> 
+		<!ELEMENT labourrate (regular, special, extra)>
+			<!ELEMENT regular (#PCDATA)>
+			<!ELEMENT special (#PCDATA)>
+			<!ELEMENT extra (#PCDATA)>
+<!ELEMENT file_storage (ftype, path)>
+	<!ELEMENT ftype (#PCDATA)>
+	<!ELEMENT path (#PCDATA)>
+<!ELEMENT countryInfo (countryName+, mailCodeEnforced, mailCodeFormat*)>
+	<!ELEMENT countryName (#PCDATA)> 
+	<!ELEMENT mailCodeEnforced (#PCDATA)>
+	<!ELEMENT mailCodeFormat (#PCDATA)>
+<!ELEMENT definedformats (email+)>
+	<!ELEMENT email (#PCDATA)> 
+<!ELEMENT defaults (yearsLimit?, taxRate+, invoice_output_path?, partnumber*, jobIDLength, platePrefix, defaultuser)>
+	<!ELEMENT yearsLimit (#PCDATA)>
+	<!ELEMENT taxRate (#PCDATA)>
+	<!ELEMENT invoice_output_path (#PCDATA)>
+	<!ELEMENT partnumber (#PCDATA)>
+	<!ELEMENT jobIDLength (#PCDATA)>
+	<!ELEMENT platePrefix (#PCDATA)>
+	<!ELEMENT defaultuser (firstname, lastname, phone, address)>
+		<!ELEMENT firstname (#PCDATA)>
+		<!ELEMENT lastname (#PCDATA)>
+		<!ELEMENT phone (#PCDATA)>
+		<!ELEMENT address (street, city, mailcode, region, country)>
+			<!ELEMENT street (#PCDATA)>
+			<!ELEMENT city (#PCDATA)>
+			<!ELEMENT mailcode (#PCDATA)>
+			<!ELEMENT region (#PCDATA)>
+			<!ELEMENT country (#PCDATA)>
+
+
